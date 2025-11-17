@@ -16,7 +16,7 @@ public class DestroyOnTrigger2D : MonoBehaviour
             return;
 
         //is one of the sides is the player?
-        PlayerHealth playerOnThis  = GetComponent<PlayerHealth>();
+        PlayerHealth playerOnThis = GetComponent<PlayerHealth>();
         PlayerHealth playerOnOther = other.GetComponent<PlayerHealth>();
 
         if (playerOnThis != null || playerOnOther != null)
@@ -26,13 +26,13 @@ public class DestroyOnTrigger2D : MonoBehaviour
             GameObject objectToDestroy =
                 (playerOnThis != null) ? other.gameObject : this.gameObject;
 
-            player.TakeDamage(1);           
-            Destroy(objectToDestroy);       
+            player.TakeDamage(1);
+            Destroy(objectToDestroy);
             onHit?.Invoke();
             return;
         }
 
-    
+
         Destroy(this.gameObject);
         Destroy(other.gameObject);
         onHit?.Invoke();
@@ -40,6 +40,6 @@ public class DestroyOnTrigger2D : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 }

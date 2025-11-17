@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;  
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Min(maxHealth, currentHealth + amount);
         Debug.Log("Player HP (healed): " + currentHealth);
     }
-     private void Die()
+    private void Die()
     {
         Debug.Log("Player died! Loading Game Over...");
         SceneManager.LoadScene("level-game-over");

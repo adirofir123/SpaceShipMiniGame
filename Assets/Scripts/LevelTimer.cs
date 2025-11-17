@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelTimer : MonoBehaviour
 {
-    [SerializeField] float levelTimeSeconds = 60f;        
+    [SerializeField] float levelTimeSeconds = 60f;
     [SerializeField] string gameOverSceneName = "level-game-over";
-    [SerializeField] NumberField timerField;              
+    [SerializeField] NumberField timerField;
 
     private float timeLeft;
     private bool isOver = false;
